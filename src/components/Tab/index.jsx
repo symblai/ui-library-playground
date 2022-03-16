@@ -4,15 +4,6 @@ import cx from 'classnames';
 import PropTypes from 'prop-types';
 import style from './style.module.css';
 
-/**
- * @param label - label for the Tab.
- * @param isActive - if the tab is active.
- * @param children - content of the tab.
- * @param icon  - icon for the tab.
- * @param variant - variant of the tab.
- * @returns {*}
- */
-
 export default function Tab({
   label, isActive, icon, variant, ...rest
 }) {

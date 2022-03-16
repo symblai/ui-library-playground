@@ -6,10 +6,9 @@ import cx from 'classnames';
 import style from './style.module.css';
 
 /**
- * @param text - text to be displayed.
- * @param count - number/count to be displayed.
- * @param isSelected - boolean to indicate whether the list element is selected or not.
- * @returns  - returns the list element.
+ *
+ * ListElement, being utilized by Dropdown component.
+ *
  */
 export default function ListElement({
   text, count, isSelected, ...rest

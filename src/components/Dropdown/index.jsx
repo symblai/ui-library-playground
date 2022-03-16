@@ -59,7 +59,6 @@ export default function Dropdown({
                 <ListElement text={option} count={10} key={index} />
               </div>
             ))}
-
         </div>
       )}
     </div>
