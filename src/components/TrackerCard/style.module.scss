@@ -1,0 +1,239 @@
+@import "../../utils/fonts";
+@import "../../utils/colors";
+@import "../../utils/elevation";
+
+.trackerCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.5rem;
+  max-width: 16.5rem;
+
+  /* Neutral/White (Common) */
+  background: $color-neutral-00;
+
+  /* Neutral/Border + Divider/300 */
+  border: 0.0625rem solid $color-neutral-300;
+
+  box-sizing: border-box;
+
+  /* Elevation/Small */
+  box-shadow: $elevation_s;
+  border-radius: 1rem;
+
+  .trackerName {
+    @include typography_body_1;
+    color: $color-neutral-800;
+    margin: 0.5rem 0rem;
+  }
+  .separator {
+    width: 1.5rem;
+    height: 0.25rem;
+    margin: 0;
+    //! color not mentioned in the color util.
+    background: #ccd5de;
+    border: none;
+    border-radius: 0.5rem;
+  }
+  .id {
+    @include typography_body_2_semi_bold;
+    color: $color-neutral-700;
+    margin: 0.5rem 0rem;
+  }
+  .description {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.9375rem;
+    line-height: 1.5rem;
+
+    letter-spacing: 0.1px;
+
+    // ! hex value not mentioned in color pallet/util
+    color: #4b5f73;
+    margin: 0.5rem 0rem;
+  }
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+
+    .iconOrSelectContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem;
+      height: 2rem;
+      width: 2rem;
+      /* Neutral/Background/200 */
+      background: $color-neutral-200;
+      border-radius: 2.5rem;
+    }
+    .optionAndChipContainer {
+      display: none;
+      flex-direction: row;
+      align-items: center;
+
+      .customChip {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0.125rem 0.75rem;
+
+        /* Neutral/White (Common) */
+        background: $color-neutral-00;
+
+        /* Neutral/Border + Divider/300 */
+        border: 1px solid $color-neutral-300;
+        box-sizing: border-box;
+
+        /* Elevation/Extra small */
+        box-shadow: $elevation_xs;
+        border-radius: 2.5rem;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+.trackerCardNotSelected {
+  .header > .iconOrSelectContainer > span {
+    display: block;
+  }
+  .header > .iconOrSelectContainer > input[type="checkbox"] {
+    display: none;
+  }
+  &:hover {
+    /* Neutral/White (Common) */
+    background: $color-neutral-00;
+
+    /* Neutral/Border + Divider/300 */
+    border: 1px solid $color-neutral-300;
+    box-sizing: border-box;
+
+    /* Elevation/Extra large */
+    box-shadow: $elevation_xl;
+    .header > .optionAndChipContainer {
+      display: flex;
+    }
+
+    .iconOrSelectContainer > span {
+      display: none;
+    }
+    .iconOrSelectContainer > input[type="checkbox"] {
+      display: block;
+    }
+  }
+  &:focus {
+    /* Primary/300 (Divider + Border) */
+    outline: 0.25rem solid $color-prime-300;
+
+    .customChip {
+      display: flex;
+    }
+    .header > .optionAndChipContainer {
+      display: flex;
+    }
+    .iconOrSelectContainer > span {
+      display: none;
+    }
+    .iconOrSelectContainer > input[type="checkbox"] {
+      display: block;
+    }
+  }
+  &:active {
+    /* Primary/100 (Background) */
+    background: $color-prime-100;
+
+    /* Primary/700 (Default) */
+    border: 1px solid $color-prime-700;
+
+    .iconOrSelectContainer {
+      background: $color-neutral-00;
+    }
+
+    .header > .optionAndChipContainer {
+      display: none;
+    }
+    .iconOrSelectContainer > span {
+      display: block;
+    }
+    .iconOrSelectContainer > input[type="checkbox"] {
+      display: none;
+    }
+  }
+}
+
+.trackerCardSelected {
+  /* Neutral/White (Common) */
+  background: $color-neutral-00;
+
+  /* Primary/700 (Default) */
+  border: 1px solid $color-prime-700;
+  box-sizing: border-box;
+
+  /* Elevation/Small */
+  box-shadow: $elevation_s;
+
+  .header > .iconOrSelectContainer > span {
+    display: none;
+  }
+  .header > .iconOrSelectContainer > input[type="checkbox"] {
+    display: block;
+  }
+  &:hover {
+    border: 1px solid $color-prime-800;
+    box-sizing: border-box;
+
+    /* Elevation/Extra large */
+    box-shadow: $elevation_xl;
+
+    .header > .optionAndChipContainer {
+      display: flex;
+    }
+
+    .header > .iconOrSelectContainer > input[type="checkbox"] {
+      /* Primary/800 */
+      background: $color-prime-800;
+    }
+  }
+
+  &:focus {
+    /* Primary/300 (Divider + Border) */
+    outline: 0.25rem solid $color-prime-300;
+
+    /* Primary/800 (Hover) */
+    border: 1px solid $color-neutral-800;
+
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.12);
+
+    .header > .optionAndChipContainer {
+      display: flex;
+    }
+  }
+
+  &:active {
+    /* Primary/100 (Background) */
+    background: $color-prime-100;
+
+    /* Primary/900 (Pressed) */
+    border: 1px solid $color-prime-900;
+    box-sizing: border-box;
+
+    /* Elevation/Small */
+    box-shadow: $elevation_s;
+
+    .iconOrSelectContainer {
+      background: $color-neutral-00;
+    }
+  }
+}
+
+.trackerCardDisabled {
+  background: $color-neutral-100;
+  pointer-events: none;
+  opacity: 0.6;
+}

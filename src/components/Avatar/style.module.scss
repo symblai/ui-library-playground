@@ -1,0 +1,36 @@
+@import "../../utils/fonts"; // contains the font family
+@import "../../utils/colors"; // contains the color palette
+@import "../../utils/elevation";
+@mixin flex-row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+@mixin avatar-layout {
+    @include flex-row-center;
+    @include typography_body_2_semi_bold;
+    box-sizing: border-box;
+
+    /* Elevation/Extra small */
+    box-shadow: $elevation_xs;
+
+    border-radius: 50%;
+
+}
+.avatar-text {
+    @include avatar-layout;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.border {
+    /* Neutral/White (Common) */
+    border: 0.125rem solid $color-neutral-00;
+}
+
+.avatar-img {
+    @include avatar-layout;
+    object-fit: cover;
+    overflow: hidden;
+}

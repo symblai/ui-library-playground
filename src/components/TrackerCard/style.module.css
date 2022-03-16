@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;1,100;1,200;1,300;1,400;1,500;1,600&family=Work+Sans:wght@100;200;300;400;500;600;700&display=swap");
+/* Elevation/- Extra small */
+/* Elevation/Extra small */
+/* Elevation/Small */
+/* Elevation/Large */
+/* Elevation/Extra large */
+.trackerCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 1.5rem;
+  max-width: 16.5rem;
+  /* Neutral/White (Common) */
+  background: #ffffff;
+  /* Neutral/Border + Divider/300 */
+  border: 0.0625rem solid #e1e6eb;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* Elevation/Small */
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+  border-radius: 1rem;
+}
+
+.trackerCard .trackerName {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  letter-spacing: 0.0094rem;
+  color: #303f4f;
+  margin: 0.5rem 0rem;
+}
+
+.trackerCard .separator {
+  width: 1.5rem;
+  height: 0.25rem;
+  margin: 0;
+  background: #ccd5de;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.trackerCard .id {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  color: #506273;
+  margin: 0.5rem 0rem;
+}
+
+.trackerCard .description {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.1px;
+  color: #4b5f73;
+  margin: 0.5rem 0rem;
+}
+
+.trackerCard .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+}
+
+.trackerCard .header .iconOrSelectContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+  /* Neutral/Background/200 */
+  background: #f1f3f4;
+  border-radius: 2.5rem;
+}
+
+.trackerCard .header .optionAndChipContainer {
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.trackerCard .header .optionAndChipContainer .customChip {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.125rem 0.75rem;
+  /* Neutral/White (Common) */
+  background: #ffffff;
+  /* Neutral/Border + Divider/300 */
+  border: 1px solid #e1e6eb;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* Elevation/Extra small */
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 2.5rem;
+  margin-right: 0.5rem;
+}
+
+.trackerCardNotSelected .header > .iconOrSelectContainer > span {
+  display: block;
+}
+
+.trackerCardNotSelected .header > .iconOrSelectContainer > input[type="checkbox"] {
+  display: none;
+}
+
+.trackerCardNotSelected:hover {
+  /* Neutral/White (Common) */
+  background: #ffffff;
+  /* Neutral/Border + Divider/300 */
+  border: 1px solid #e1e6eb;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* Elevation/Extra large */
+  -webkit-box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.12);
+}
+
+.trackerCardNotSelected:hover .header > .optionAndChipContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.trackerCardNotSelected:hover .iconOrSelectContainer > span {
+  display: none;
+}
+
+.trackerCardNotSelected:hover .iconOrSelectContainer > input[type="checkbox"] {
+  display: block;
+}
+
+.trackerCardNotSelected:focus {
+  /* Primary/300 (Divider + Border) */
+  outline: 0.25rem solid #a8d9ff;
+}
+
+.trackerCardNotSelected:focus .customChip {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.trackerCardNotSelected:focus .header > .optionAndChipContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.trackerCardNotSelected:focus .iconOrSelectContainer > span {
+  display: none;
+}
+
+.trackerCardNotSelected:focus .iconOrSelectContainer > input[type="checkbox"] {
+  display: block;
+}
+
+.trackerCardNotSelected:active {
+  /* Primary/100 (Background) */
+  background: #ebf7ff;
+  /* Primary/700 (Default) */
+  border: 1px solid #0076d1;
+}
+
+.trackerCardNotSelected:active .iconOrSelectContainer {
+  background: #ffffff;
+}
+
+.trackerCardNotSelected:active .header > .optionAndChipContainer {
+  display: none;
+}
+
+.trackerCardNotSelected:active .iconOrSelectContainer > span {
+  display: block;
+}
+
+.trackerCardNotSelected:active .iconOrSelectContainer > input[type="checkbox"] {
+  display: none;
+}
+
+.trackerCardSelected {
+  /* Neutral/White (Common) */
+  background: #ffffff;
+  /* Primary/700 (Default) */
+  border: 1px solid #0076d1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* Elevation/Small */
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+}
+
+.trackerCardSelected .header > .iconOrSelectContainer > span {
+  display: none;
+}
+
+.trackerCardSelected .header > .iconOrSelectContainer > input[type="checkbox"] {
+  display: block;
+}
+
+.trackerCardSelected:hover {
+  border: 1px solid #0062ad;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* Elevation/Extra large */
+  -webkit-box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.12);
+}
+
+.trackerCardSelected:hover .header > .optionAndChipContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.trackerCardSelected:hover .header > .iconOrSelectContainer > input[type="checkbox"] {
+  /* Primary/800 */
+  background: #0062ad;
+}
+
+.trackerCardSelected:focus {
+  /* Primary/300 (Divider + Border) */
+  outline: 0.25rem solid #a8d9ff;
+  /* Primary/800 (Hover) */
+  border: 1px solid #303f4f;
+  -webkit-box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.12);
+}
+
+.trackerCardSelected:focus .header > .optionAndChipContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.trackerCardSelected:active {
+  /* Primary/100 (Background) */
+  background: #ebf7ff;
+  /* Primary/900 (Pressed) */
+  border: 1px solid #004b85;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* Elevation/Small */
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+}
+
+.trackerCardSelected:active .iconOrSelectContainer {
+  background: #ffffff;
+}
+
+.trackerCardDisabled {
+  background: #f9f9fa;
+  pointer-events: none;
+  opacity: 0.6;
+}
+/*# sourceMappingURL=style.module.css.map */

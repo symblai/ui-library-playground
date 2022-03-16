@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;1,100;1,200;1,300;1,400;1,500;1,600&family=Work+Sans:wght@100;200;300;400;500;600;700&display=swap");
+/* Elevation/- Extra small */
+/* Elevation/Extra small */
+/* Elevation/Small */
+/* Elevation/Large */
+/* Elevation/Extra large */
+.search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 0.75rem;
+  width: 25rem;
+  /* Neutral/Border + Divider/300 */
+  border: 0.0625rem solid #e1e6eb;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 0.5rem;
+  padding-left: 2rem;
+  background: url("../../assets/MagnifyingGlass.svg") no-repeat left center;
+  background-position: 0.625rem;
+  background-size: 1.25rem;
+  /* Neutral/Background/100 */
+  background-color: #f9f9fa;
+}
+
+.search input[type="text"] {
+  background: transparent;
+  width: 100%;
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.0063rem;
+  outline: none;
+  border: none;
+}
+
+.search:disabled {
+  /* Neutral/Background/100 */
+  background: #f9f9fa;
+  /* Neutral/Border + Divider/200 */
+  border: 0.0625rem solid #f1f3f4;
+}
+
+.search:hover {
+  /* Neutral/Background/100 */
+  background-color: #f9f9fa;
+  /* Neutral/Border + Divider/400 */
+  border: 0.0625rem solid #c5cdd6;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* Elevation/- Extra small */
+  -webkit-box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.06);
+          box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.search:focus-within {
+  /* Primary/700 (Default) */
+  border: 0.0625rem solid #0076d1;
+  outline: 0.188rem solid #a8d9ff;
+}
+
+.searchField-helper-text-on-error {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.0063rem;
+  /* Error/700 (Default) */
+  color: #c1272d;
+}
+
+.searchField-helper-text-on-correct {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.0063rem;
+  /* Success/700 (Default) */
+  color: #42822c;
+}
+
+.searchField-isError-true {
+  /* Error/300 (Divider + Border) */
+  border: 0.0625rem solid #f1bbbd !important;
+}
+
+.searchField-isError-false {
+  /* Success/300 (Divider + Border) */
+  border: 0.0625rem solid #bee5b1 !important;
+}
+
+.label-n-description-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0px;
+  margin-left: 0.125rem;
+}
+
+.searchField-description {
+  height: 1rem;
+  /* Body / Body 3 */
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.8125rem;
+  line-height: 1rem;
+  letter-spacing: 0.0063rem;
+  /* identical to box height, or 123% */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.1px;
+  /* Neutral/Text/600 */
+  color: #67788a;
+  padding: 0.125rem 0rem;
+  margin-bottom: 0.125rem;
+}
+
+.searchField-label {
+  height: 1.25rem;
+  /* Body / Body 2 */
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.0063rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Neutral/Text/700 */
+  color: #4b5f73;
+  padding: 0.125rem 0rem;
+}
+/*# sourceMappingURL=style.module.css.map */

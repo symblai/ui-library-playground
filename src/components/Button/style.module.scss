@@ -1,0 +1,175 @@
+@import "../../utils/colors"; // contains the theme color
+@import "../../utils/fonts"; // contains the font family
+@import "../../utils/elevation";
+
+@mixin flex-row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-layout {
+    @include flex-row-center;
+    @include typography_button;
+    box-shadow: $elevation_s;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    // height: 2.5rem;
+
+    img {
+        max-height: 1.25rem;
+        max-width: 1.25rem;
+    }
+}
+
+.button--contained {
+    /* Primary/Gradient */
+    background: linear-gradient(277.38deg, $color-prime-700 0%, #0090ff 100%);
+    color: $color-neutral-00;
+    border: none;
+
+    &:hover {
+        background: $color-prime-800;
+    }
+
+    &:active {
+        /* Primary/900 (Pressed) */
+        background: $color-prime-900;
+
+        /* Primary/300 (Divider + Border) */
+        color: $color-prime-300;
+    }
+    &:focus-visible {
+        /* Primary/800 (Hover) */
+        background: $color-prime-800;
+        outline: 0.188rem solid $color-prime-300;
+    }
+
+    &:disabled {
+        cursor: default;
+        /* Neutral/Background/200 */
+        background: $color-neutral-200;
+
+        /* Neutral/Icon/500 */
+        color: $color-neutral-500;
+    }
+}
+
+.button--outlined {
+    /* Neutral/White (Common) */
+    background: $color-neutral-00;
+
+    /* Primary/300 (Divider + Border) */
+    border: 0.063rem solid $color-prime-300;
+
+    /* Primary/700 (Default) */
+    color: $color-prime-700;
+
+    &:hover {
+        /* Neutral/Background/100 */
+        background: $color-neutral-100;
+        /* Primary/800 (Hover) */
+        border: 0.063rem solid $color-prime-800;
+        /* Primary/800 (Hover) */
+        color: $color-prime-800;
+    }
+
+    &:active {
+        /* Primary/100 (Background) */
+        background: $color-prime-100;
+
+        /* Primary/900 (Pressed) */
+        border: 0.063rem solid $color-prime-900;
+
+        /* Primary/900 (Pressed) */
+        color: $color-prime-900;
+    }
+    &:focus-visible {
+        /* Neutral/White (Common) */
+        background: $color-neutral-00;
+
+        /* Primary/800 (Hover) */
+        border: 0.063rem solid $color-prime-800;
+
+        outline: 0.188rem solid $color-prime-300;
+    }
+
+    &:disabled {
+        cursor: default;
+        /* Neutral/White (Common) */
+        background: $color-neutral-00;
+
+        /* Neutral/Border + Divider/200 */
+        border: 0.063rem solid $color-neutral-200;
+
+        /* Neutral/Icon/500 */
+        color: $color-neutral-500;
+    }
+}
+
+.button--default {
+    /* Primary/700 (Default) */
+    background: $color-neutral-00;
+    border: none;
+    color: $color-prime-700;
+
+    &:hover {
+        /* Neutral/Background/100 */
+
+        background: $color-neutral-100;
+        /* Primary/800 (Hover) */
+
+        color: $color-prime-800;
+    }
+
+    &:active {
+        /* Primary/100 (Background) */
+
+        background: $color-prime-100;
+        /* Primary/900 (Pressed) */
+
+        color: $color-prime-900;
+    }
+    &:focus-visible {
+        /* Primary/800 (Hover) */
+
+        color: $color-prime-800;
+        outline: 0.188rem solid $color-prime-300;
+    }
+
+    &:disabled {
+        background: $color-neutral-00;
+
+        cursor: default;
+        /* Neutral/Icon/500 */
+
+        color: $color-neutral-500;
+    }
+}
+
+.label-right {
+    padding: 0.625rem 1rem 0.625rem 0.75rem;
+    span {
+        margin-left: 0.5rem;
+    }
+}
+.label-left {
+    padding: 0.625rem 0.75rem 0.625rem 1rem;
+    span {
+        margin-right: 0.5rem;
+    }
+}
+.label-middle {
+    padding: 0.625rem 1rem;
+    span {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+}
+.label-normal {
+    padding: 0.625rem 1rem;
+}
+.label-none {
+    padding: 0.625rem;
+}

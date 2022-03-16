@@ -1,0 +1,104 @@
+@import "../../utils/colors";
+@import "../../utils/fonts";
+@import "../../utils/elevation";
+
+@mixin border-bottom($color) {
+    border-bottom: 0.125rem solid $color;
+}
+.tab-layout {
+    /* Auto layout */
+    margin: 0.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+
+    // min-width: 109px;
+
+    /* Neutral/White (Common) */
+    background: #ffffff;
+
+    border-radius: 0.125rem;
+    border: none;
+
+    /* Body / Nav */
+    @include typography_nav;
+
+    @include border-bottom(transparent);
+
+    img {
+        margin-right: 0.5rem;
+        object-fit: cover;
+        overflow: hidden;
+        max-height: 1.25rem;
+    }
+}
+
+.tab-default-active {
+    @include border-bottom($color-prime-500);
+
+    color: $color-prime-500;
+    &:hover {
+        /* Primary/800 (Hover) */
+        @include border-bottom($color-prime-800);
+        color: $color-prime-800;
+    }
+    &:active {
+        @include border-bottom($color-prime-900);
+        color: $color-prime-900;
+    }
+    &:focus-visible {
+        @include border-bottom($color-prime-800);
+        outline: 0.188rem solid $color-prime-300;
+        color: $color-prime-800;
+    }
+    &:disabled {
+        @include border-bottom($color-prime-400);
+        color: $color-neutral-500;
+    }
+}
+.tab-inactive {
+    color: $color-neutral-600;
+    &:hover {
+        color: $color-neutral-800;
+    }
+    &:active {
+        color: $color-neutral-900;
+    }
+    &:focus-visible {
+        color: $color-neutral-800;
+        outline: 0.188rem solid $color-prime-300;
+    }
+    &:disabled {
+        color: $color-neutral-500;
+    }
+}
+
+.tab-segment-active {
+    /* Neutral/White (Common) */
+    background: $color-neutral-00;
+
+    /* Elevation/Small */
+    box-shadow: $elevation_s;
+    border-radius: 0.125rem;
+
+    color: $color-prime-500;
+    &:hover {
+        color: $color-prime-800;
+        background: $color-neutral-100;
+    }
+    &:active {
+        color: $color-prime-900;
+        background: $color-prime-100;
+    }
+    &:focus-visible {
+        color: $color-prime-800;
+        background: $color-neutral-100;
+        outline: 0.188rem solid $color-prime-300;
+    }
+    &:disabled {
+        color: $color-neutral-500;
+        background: $color-neutral-200;
+    }
+}

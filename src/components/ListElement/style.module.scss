@@ -1,0 +1,86 @@
+@import "../../utils/fonts";
+@import "../../utils/colors";
+
+.listElement {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    @include typography_body_2;
+    color: $color-neutral-600;
+    .counter {
+        /* Auto layout */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0rem 0.25rem;
+        background: $color-neutral-200;
+        border-radius: 2.5rem;
+        color: $color-neutral-600;
+    }
+    &:hover {
+        background: $color-neutral-100;
+        .counter {
+            background: $color-neutral-00;
+            color: $color-neutral-800;
+        }
+    }
+    &:active {
+        background: $color-prime-100;
+    }
+    &:focus-visible {
+        background: $color-neutral-100;
+        outline: 0.188rem solid $color-prime-300;
+    }
+    &:disabled {
+        pointer-events: none;
+        background: $color-neutral-200;
+        .counter {
+            background: $color-neutral-100;
+            color: $color-neutral-500;
+        }
+    }
+}
+.listElement-selected {
+    /* Primary/Gradient */
+    background: linear-gradient(277.38deg, #0076d1 0%, #0090ff 100%);
+    @include typography_body_2;
+    color: $color-neutral-00;
+    .counter {
+        background: $color-prime-100;
+    }
+    &:hover {
+        background: $color-prime-800;
+        color: $color-neutral-00;
+        .counter {
+            background: $color-prime-100;
+        }
+    }
+    &:active {
+        background: $color-prime-900;
+        color: $color-neutral-00;
+        .counter {
+            background: $color-prime-100;
+        }
+    }
+    &:focus-visible {
+        background: $color-prime-800;
+        color: $color-neutral-00;
+        outline: 0.188rem solid $color-prime-300;
+        .counter {
+            background: $color-prime-100;
+        }
+    }
+    &:disabled {
+        pointer-events: none;
+        background: $color-neutral-200;
+        color: $color-neutral-600;
+        .counter {
+            background: $color-neutral-100;
+            color: $color-neutral-500;
+        }
+    }
+}

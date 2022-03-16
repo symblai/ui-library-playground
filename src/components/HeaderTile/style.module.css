@@ -1,0 +1,102 @@
+.header-tile-layout {
+  min-height: 13.25rem;
+  /* Elevation/Large */
+  -webkit-box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.12);
+  border-radius: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.header-tile-layout .header-and-data-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.header-tile-layout .tile-title {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 40px;
+  /* identical to box height, or 125% */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  letter-spacing: 0.24px;
+  /* Neutral/Background/100 */
+  color: #f9f9fa;
+}
+
+.header-tile-layout .speakers-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 15px;
+  /* Body / Body 2 SemiBold */
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  /* Neutral/Background/100 */
+  color: #f9f9fa;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  .header-tile-layout .tile-title {
+    font-weight: 300;
+    font-size: 24px;
+  }
+  .speakers-container {
+    font-size: 8px;
+  }
+}
+/*# sourceMappingURL=style.module.css.map */

@@ -1,0 +1,116 @@
+@import "../../utils/colors"; // contains the theme color
+@import "../../utils/fonts"; // contains the font family
+@import "../../utils/elevation"; // contains the elevations.
+
+.search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    width: 25rem;
+
+    /* Neutral/Border + Divider/300 */
+
+    border: 0.0625rem solid #e1e6eb;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    padding-left: 2rem;
+    background: url("../../assets/MagnifyingGlass.svg") no-repeat left center;
+    background-position: 0.625rem;
+    background-size: 1.25rem;
+    /* Neutral/Background/100 */
+    background-color: #f9f9fa;
+    input[type="text"] {
+        background: transparent;
+        width: 100%;
+        @include typography_body_2;
+        outline: none;
+        border: none;
+    }
+    &:disabled {
+        /* Neutral/Background/100 */
+
+        background: #f9f9fa;
+        /* Neutral/Border + Divider/200 */
+
+        border: 0.0625rem solid #f1f3f4;
+    }
+    &:hover {
+        /* Neutral/Background/100 */
+
+        background-color: #f9f9fa;
+        /* Neutral/Border + Divider/400 */
+
+        border: 0.0625rem solid #c5cdd6;
+        box-sizing: border-box;
+
+        /* Elevation/- Extra small */
+        box-shadow: $elevation_xxs;
+    }
+
+    &:focus-within {
+        /* Primary/700 (Default) */
+
+        border: 0.0625rem solid #0076d1;
+        outline: 0.188rem solid $color-prime-300;
+    }
+}
+.searchField-helper-text-on-error {
+    @include typography_body_2;
+
+    /* Error/700 (Default) */
+    color: #c1272d;
+}
+.searchField-helper-text-on-correct {
+    @include typography_body_2;
+
+    /* Success/700 (Default) */
+    color: #42822c;
+}
+.searchField-isError-true {
+    /* Error/300 (Divider + Border) */
+    border: 0.0625rem solid #f1bbbd !important;
+}
+.searchField-isError-false {
+    /* Success/300 (Divider + Border) */
+    border: 0.0625rem solid #bee5b1 !important;
+}
+
+.label-n-description-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    margin-left: 0.125rem;
+}
+.searchField-description {
+    height: 1rem;
+    /* Body / Body 3 */
+    @include typography_body_3;
+
+    /* identical to box height, or 123% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.1px;
+
+    /* Neutral/Text/600 */
+
+    color: #67788a;
+
+    padding: 0.125rem 0rem;
+    margin-bottom: 0.125rem;
+}
+.searchField-label {
+    height: 1.25rem;
+    /* Body / Body 2 */
+    @include typography_body_2;
+    display: flex;
+    align-items: center;
+
+    /* Neutral/Text/700 */
+
+    color: #4b5f73;
+
+    padding: 0.125rem 0rem;
+}

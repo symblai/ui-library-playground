@@ -1,0 +1,126 @@
+@import "../../utils/colors"; // contains the theme color.
+@import "../../utils/fonts"; // contains the font family.
+@import "../../utils/elevation"; //contains the elevations.
+
+@mixin flex-row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+@mixin chip-general-layout {
+    @include flex-row-center;
+
+    padding: 0.375rem 0.75rem 0.375rem 0.375rem;
+    min-height: 2.25rem; //!check
+    border: 0.063rem solid $color-neutral-300;
+    box-sizing: border-box;
+    border-radius: 2.5rem;
+
+    @include typography_body_2;
+    .chip-text {
+        padding-left: 0.3rem;
+    }
+
+    &:focus-visible {
+        outline: none;
+        outline: 0.188rem solid $color-prime-300;
+    }
+}
+
+.chip-layout {
+    @include chip-general-layout;
+    background-color: $color-prime-00;
+
+    // ! check
+    cursor: pointer;
+
+    /* Elevation/Extra small */
+    box-shadow: $elevation_xs;
+
+    &:hover {
+        background-color: $color-neutral-100;
+        .emoji,
+        .number {
+            background: $color-prime-00;
+        }
+    }
+
+    &:active {
+        background-color: $color-neutral-200;
+        .emoji,
+        .number {
+            background: $color-prime-00;
+        }
+    }
+    &:disabled {
+        background-color: $color-prime-00;
+        opacity: 0.5; //!check
+    }
+    &:focus-visible {
+        background-color: $color-neutral-100;
+        .emoji,
+        .number {
+            background: $color-prime-00;
+        }
+    }
+    img {
+        border-radius: 50%;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    // style for the chip type="initial".
+    .initials {
+        border-radius: 50%;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: $color-extra-Lavender-100;
+        color: #4e5ec8;
+        @include flex-row-center;
+    }
+
+    .emoji {
+        border-radius: 50%;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: $color-neutral-200;
+        @include flex-row-center;
+    }
+    .number {
+        @include flex-row-center;
+        margin-left: 0.375rem;
+        padding: 0 0.25rem;
+        background: $color-neutral-200;
+        border-radius: 2.5rem;
+        order: 2;
+    }
+}
+
+.selected-chip-layout {
+    @include chip-general-layout;
+    background: linear-gradient(277.38deg, $color-prime-700 0%, #0090ff 100%);
+    /* Neutral/White (Common) */
+    color: $color-prime-00;
+
+    &:hover {
+        /* Primary/800 (Hover) */
+        background: $color-prime-800;
+    }
+
+    &:active {
+        /* Primary/900 (Pressed) */
+        background: $color-prime-900;
+    }
+    &:disabled {
+        /* Neutral/Border + Divider/200 */
+        background: $color-neutral-200;
+
+        /* Neutral/Icon/500 */
+        color: $color-neutral-500;
+    }
+    &:focus-visible {
+        /* Primary/800 (Hover) */
+        background: $color-prime-800;
+    }
+}

@@ -1,0 +1,89 @@
+@import "../../utils/fonts";
+@import "../../utils/colors";
+@import "../../utils/elevation";
+.InsightsCard {
+  @include typography_body_2;
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+
+  /* Neutral/Background/100 */
+  background: #f9f9fa;
+
+  /* Elevation/Small */
+  box-shadow: $elevation_s;
+
+  color: $color-neutral-700;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 0.5rem;
+  max-width: 20.0625rem;
+
+  .cardHeader {
+    /* Meta data + Menu button */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0.5rem 0rem;
+
+    .chipAndTimeStampContainer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .timeStamp {
+        margin-left: 0.25rem;
+      }
+    }
+  }
+
+  .cardBody {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 0.5rem 0rem;
+  }
+
+  .footerNote {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    // padding: 0px 16px;
+    img {
+      padding: 4px;
+    }
+  }
+
+  &:hover {
+    /* Neutral/White (Common) */
+    background: $color-neutral-00;
+
+    /* Elevation/Large */
+    box-shadow: $elevation_l;
+  }
+  &:focus-visible {
+    /* Neutral/White (Common) */
+    background: $color-neutral-00;
+
+    /* Primary/300 (Divider + Border) */
+    outline: 3px solid #a8d9ff;
+
+    /* Elevation/Large */
+    box-shadow: $elevation_l;
+  }
+}
+.insightsCardDisabled {
+  background: $color-neutral-100;
+  pointer-events: none;
+  opacity: 0.6;
+}

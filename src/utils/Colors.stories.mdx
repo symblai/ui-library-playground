@@ -1,0 +1,100 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import { Description } from '@storybook/addon-docs';
+
+<Meta title="Colors" description="Hello" />
+
+contains the colors that are being used by the UI components. If you want to utilize in the new component's SCSS, utilize it as ```$color-{name}-{value}```. e.g. ```$color-neutral-00```.
+
+
+<ColorPalette>
+  <ColorItem
+    title="color-prime"
+    subtitle="customized primary colors"
+    colors={{
+    "00": "#ffffff",
+    "100": "#ebf7ff",
+    "200": "#c7e7ff",
+    "300": "#a8d9ff",
+    "400": "#8accff",
+    "500": "#4cb1ff",
+    "600": "#0f97ff",
+    "700": "#0076d1",
+    "800": "#0062ad",
+    "900": "#004b85",
+ }}
+  />
+  <ColorItem
+    title="color-neutral"
+    subtitle="neutral colors"
+    colors={{
+    "00": "#ffffff",
+    "100": "#f9f9fa",
+    "200": "#f1f3f4",
+    "300": "#e1e6eb",
+    "400": "#c5cdd6",
+    "500": "#b1bbc4",
+    "600": "#67788a",
+    "700": "#506273",
+    "800": "#303f4f",
+    "900": "#1c2833",
+       }}
+  />
+  
+  <ColorItem
+    title="color-denim (info)"
+    subtitle="denim colors"
+    colors={{
+      "100":"#EBF6FF",
+      "300":"#ACD8F8",
+      "700":"#0E6BAE",
+      "800":"#045894",
+      "900":"#00406E",
+       }}
+  />
+  
+  <ColorItem
+    title="color-forest (success)"
+    subtitle="Green"
+    colors={{
+      "100":"#F2FFEE",
+      "300":"#BEE5B1",
+      "700":"#42822C",
+      "800":"#256B0E",
+      "900":"#154705",
+       }}
+  />
+  <ColorItem
+    title="color-Mustard (warning)"
+    subtitle="mustard"
+    colors={{
+      "100":"#FFF8EA",
+      "400":"#F5D9A0",
+      "700":"#E3A019",
+      "800":"#BD8515",
+      "900":"#986600",
+       }}
+  />
+  <ColorItem
+    title="color-tomato (danger)"
+    subtitle="Red"
+    colors={{
+      "100":"#FFF3F4",
+      "300":"#F1BBBD",
+      "700":"#C1272D",
+      "800":"#A12025",
+      "900":"#601316",
+       }}
+  />
+
+  <ColorItem
+    title="prime-gradient"
+    subtitle="some extra colors"
+    colors={{ "primary-gradient": "linear-gradient(277.38deg, #0076D1 0%, #0090FF 100%)" }}
+  />
+  <ColorItem
+    title="color-extra"
+    subtitle="some extra colors"
+    colors={{ "Lavender-100": "#e4e7ff" }}
+  />
+ 
+</ColorPalette>
