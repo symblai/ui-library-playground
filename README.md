@@ -25,7 +25,7 @@ Navigate to  ```storybook-static``` to view the built storybook.
 
 ### `npm run deploy-storybook`
 
-Deploys storybook via gh-pages to [symblai.github.io/react-symbl-components](https://symblai.github.io/react-symbl-components)
+Deploys storybook via gh-pages to [symblai.github.io/ui-library-playground](https://symblai.github.io/ui-library-playground)
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\

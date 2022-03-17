@@ -1,6 +1,6 @@
 {
-  "name": "react-Symbl-components",
-  "homepage": "http://symblai.github.io/react-symbl-components",
+  "name": "ui-library-playground",
+  "homepage": "http://symblai.github.io/ui-library-playground",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
